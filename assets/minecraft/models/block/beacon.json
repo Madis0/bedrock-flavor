@@ -28,7 +28,8 @@
                         16,
                         16
                     ],
-                    "texture": "#glass"
+                    "texture": "#glass",
+                    "cullface": "down"
                 },
                 "up": {
                     "uv": [
@@ -37,7 +38,8 @@
                         16,
                         16
                     ],
-                    "texture": "#glass"
+                    "texture": "#glass",
+                    "cullface": "up"
                 },
                 "north": {
                     "uv": [
@@ -46,7 +48,8 @@
                         16,
                         16
                     ],
-                    "texture": "#glass"
+                    "texture": "#glass",
+                    "cullface": "north"
                 },
                 "south": {
                     "uv": [
@@ -55,7 +58,8 @@
                         16,
                         16
                     ],
-                    "texture": "#glass"
+                    "texture": "#glass",
+                    "cullface": "south"
                 },
                 "west": {
                     "uv": [
@@ -64,7 +68,8 @@
                         16,
                         16
                     ],
-                    "texture": "#glass"
+                    "texture": "#glass",
+                    "cullface": "west"
                 },
                 "east": {
                     "uv": [
@@ -73,7 +78,8 @@
                         16,
                         16
                     ],
-                    "texture": "#glass"
+                    "texture": "#glass",
+                    "cullface": "east"
                 }
             }
         },
@@ -98,7 +104,8 @@
                         14,
                         14
                     ],
-                    "texture": "#obsidian"
+                    "texture": "#obsidian",
+                    "cullface": "down"
                 },
                 "up": {
                     "uv": [
