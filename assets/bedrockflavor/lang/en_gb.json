@@ -716,5 +716,7 @@
     "mco.pdp.private.easyToManage": "",
     "mco.pdp.private.worldSlots": "",
     "mco.pdp.private.secure": "",
-    "mco.pdp.tryForFree": "\ub020 Try free"
+    "mco.pdp.tryForFree": "\ub020 Try free",
+    "recipe.toast.title": "New recipe unlocked!",
+    "recipe.toast.description": "View in recipe book"
 }

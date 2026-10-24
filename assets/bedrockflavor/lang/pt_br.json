@@ -1558,5 +1558,7 @@
     "mco.pdp.private.easyToManage": "",
     "mco.pdp.private.worldSlots": "",
     "mco.pdp.private.secure": "",
-    "mco.pdp.tryForFree": "\ub020 Teste grátis"
+    "mco.pdp.tryForFree": "\ub020 Teste grátis",
+    "recipe.toast.title": "Nova Receita desbloqueada!",
+    "recipe.toast.description": "Ver no livro de receitas"
 }
