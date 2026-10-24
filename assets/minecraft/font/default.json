@@ -20,7 +20,7 @@
         },
         {
             "type": "bitmap",
-            "file": "bedrockflavor:icons/datapack.png",
+            "file": "bedrockflavor:icons/data.png",
             "ascent": 9,
             "height": 9,
             "chars": [
@@ -38,7 +38,7 @@
         },
         {
             "type": "bitmap",
-            "file": "bedrockflavor:icons/gamerules.png",
+            "file": "bedrockflavor:icons/game_rules.png",
             "ascent": 9,
             "height": 9,
             "chars": [
@@ -79,7 +79,7 @@
         },
         {
             "type": "bitmap",
-            "file": "bedrockflavor:icons/sound.png",
+            "file": "bedrockflavor:icons/audio.png",
             "ascent": 8,
             "chars": [
                 "\ub010"
@@ -103,7 +103,7 @@
         },
         {
             "type": "bitmap",
-            "file": "bedrockflavor:icons/server.png",
+            "file": "bedrockflavor:icons/discover.png",
             "ascent": 9,
             "height": 10,
             "chars": [
@@ -266,7 +266,7 @@
         },
         {
             "type": "bitmap",
-            "file": "bedrockflavor:icons/howto.png",
+            "file": "bedrockflavor:icons/how_to.png",
             "ascent": 8,
             "chars": [
                 "\ub033"
