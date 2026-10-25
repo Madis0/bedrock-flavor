@@ -629,6 +629,8 @@
     "bedrockskins.option.show_paper_doll.none": "Hidden",
     "bedrockskins.gui.title": "Dressing Room",
     "bedrockskins.button.change_skin.tooltip": "Dressing Room",
+    "key.bedrockskins.open": "Open Dressing Room",
+    "bedrockskins.button.wardrobe.tooltip": "Dressing Room",
     "controlify.gui.button": "§f\ub031§r Controller",
     "controlify.gui.show_keyboard.off": "§f\ub002§r",
     "controlify.gui.auto_jump": "Auto jump",

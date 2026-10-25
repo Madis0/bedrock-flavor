@@ -1468,6 +1468,8 @@
     "bedrockskins.option.show_paper_doll.none": "Oculto",
     "bedrockskins.gui.title": "Vestiário",
     "bedrockskins.button.change_skin.tooltip": "Vestiário",
+    "key.bedrockskins.open": "Abrir Vestiário",
+    "bedrockskins.button.wardrobe.tooltip": "Vestiário",
     "controlify.gui.button": "§f\ub031§r Controle",
     "controlify.gui.show_keyboard.off": "§f\ub002§r",
     "controlify.gui.auto_jump": "Pulo automático",
