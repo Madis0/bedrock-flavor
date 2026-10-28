@@ -6,11 +6,11 @@ includeJe = True
 excludeKnownJe = True
 
 # File names and -paths
-jePath = "Input/en_us.json"
-bePath = "Input/en_US.lang"
-extraJePath = "Extra/source-en_us.json"
-outputPath = "Extra/mappings.csv"
-excludeJePath = "exclude.txt"
+jePath = "Script/Input/en_us.json"
+bePath = "Script/Input/en_US.lang"
+extraJePath = "Script/Extra/source-en_us.json"
+outputPath = "Script/Extra/mappings.csv"
+excludeJePath = "Script/Extra/exclude.txt"
 
 # Arrays to store data in (temporarily)
 jeDict = {}

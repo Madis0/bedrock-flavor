@@ -29,22 +29,22 @@ if len(sys.argv) > 1:
 
 if useDownloader:
     print("Executing the downloader script...")
-    subprocess.run([sys.executable, "downloader.py"], check=True)
+    subprocess.run([sys.executable, "Script/downloader.py"], check=True)
     print("Download script completed.\n")
 
 print("Now executing the mapper script...")
-subprocess.run([sys.executable, "mapper.py"], check=True)
+subprocess.run([sys.executable, "Script/mapper.py"], check=True)
 print("Mapper script completed.")
 
 if extraSteps:
     print("\nNow executing the spawn egg adding script...")
-    subprocess.call(["python", "spawn-egg-adder.py"])
+    subprocess.call(["python", "Script/spawn-egg-adder.py"])
     print("Spawn egg adding script completed.\n\nNow executing the extra mapping cleanup...")
-    subprocess.call(["python", "clean-extra-mappings.py"])
+    subprocess.call(["python", "Script/clean-extra-mappings.py"])
     print("\nExtra mapping cleanup completed.")
 
 print("Now executing the porting script for language pairs...")
-porterArgs = [sys.executable, "porter.py"]
+porterArgs = [sys.executable, "Script/porter.py"]
 if jeLangs or beLangs:
     porterArgs.extend([",".join(jeLangs), ",".join(beLangs)])
 subprocess.run(porterArgs, check=True)

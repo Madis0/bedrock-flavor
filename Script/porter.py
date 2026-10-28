@@ -5,9 +5,9 @@ import re
 import sys
 from pathlib import Path
 
-inputPath = Path("Input")
-extraPath = Path("Extra")
-outputPath = Path("Output")
+inputPath = Path("Script/Input")
+extraPath = Path("Script/Extra")
+outputPath = Path("Script/Output")
 outputPath.mkdir(exist_ok=True)
 
 jeLangs = [ 

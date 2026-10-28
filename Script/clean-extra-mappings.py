@@ -1,8 +1,8 @@
 # Removes lines from extra-mappings.csv that already exist in mappings.csv
 
 # File names
-mappings_file = 'Extra/mappings.csv'
-extra_mappings_file = 'Extra/extra-mappings.csv'
+mappings_file = 'Script/Extra/mappings.csv'
+extra_mappings_file = 'Script/Extra/extra-mappings.csv'
 
 def read_mappings(file_name):
     with open(file_name, 'r', encoding='utf-8') as file:
