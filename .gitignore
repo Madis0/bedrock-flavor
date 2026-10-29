@@ -5,4 +5,5 @@
 desktop.ini
 .DS_Store
 /Script/Input
-/Script/Output
+/Script/Output-BedrockFlavor
+/Script/Output-Bedrockify
