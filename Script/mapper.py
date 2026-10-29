@@ -73,7 +73,7 @@ def count_percent(index, total):
 
 # Importing files
 
-if includeJe:
+if includeJe and args.pack == "bedrockflavor":
     print("Opening Java Edition strings...")
     parse_json(jePath, jeDict)
 

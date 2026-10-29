@@ -52,26 +52,25 @@ if useDownloader:
 
 for pack in packs:
     print(f"\nBuilding the {pack} profile...")
-    if pack == "bedrockflavor":
-        print("Now executing the mapper script...")
-        subprocess.run(
-            [sys.executable, str(scriptDir / "mapper.py"), "--pack", pack],
-            check=True,
-        )
-        print("Mapper script completed.")
+    print("Now executing the mapper script...")
+    subprocess.run(
+        [sys.executable, str(scriptDir / "mapper.py"), "--pack", pack],
+        check=True,
+    )
+    print("Mapper script completed.")
 
-        if extraSteps:
+    if extraSteps:
+        if pack == "bedrockflavor":
             print("\nNow executing the spawn egg adding script...")
             subprocess.call(
                 [sys.executable, str(scriptDir / "spawn-egg-adder.py"), "--pack", pack]
             )
-            print("Spawn egg adding script completed.\n\nNow executing the extra mapping cleanup...")
-            subprocess.call(
-                [sys.executable, str(scriptDir / "clean-extra-mappings.py"), "--pack", pack]
-            )
-            print("\nExtra mapping cleanup completed.")
-    else:
-        print("Using source English strings and locale extras; skipping generic mappings.")
+            print("Spawn egg adding script completed.")
+        print("Now executing the extra mapping cleanup...")
+        subprocess.call(
+            [sys.executable, str(scriptDir / "clean-extra-mappings.py"), "--pack", pack]
+        )
+        print("Extra mapping cleanup completed.")
 
     print("Now executing the porting script for language pairs...")
     porterArgs = [sys.executable, str(scriptDir / "porter.py"), "--pack", pack]

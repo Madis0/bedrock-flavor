@@ -93,13 +93,18 @@ def parse_lang(path):
 
 
 print("Opening mapped strings...")
-if args.pack == "bedrockflavor":
-    parse_csv(extraPath / "mappings.csv", mapDict)
-    parse_csv(extraPath / "extra-mappings.csv", mapDict)
+parse_csv(extraPath / "mappings.csv", mapDict)
+parse_csv(extraPath / "extra-mappings.csv", mapDict)
 
 overrides = parse_json(extraPath / "overrides.json")
 prefixes = parse_json(extraPath / "prefixes.json")
 sourceEnglish = parse_json(extraPath / "source-en_us.json")
+if args.pack == "bedrockify":
+    mapDict = {
+        bedrockKey: sourceKey
+        for bedrockKey, sourceKey in mapDict.items()
+        if sourceKey in sourceEnglish
+    }
 unicodeEscapes = parse_unicode_escapes(extraPath.glob("*.json"))
 sourceBedrockEnglish = parse_lang(inputPath / "en_US.lang")
 sourceKeysByValue = {}
@@ -115,12 +120,13 @@ for jeLang, beLang in languagePairs:
     beDict = parse_lang(beFile)
     outputDict = {}
 
-    if args.pack == "bedrockflavor":
-        for beKey, jeKey in mapDict.items():
-            if beKey in beDict and jeKey in jeDict:
-                outputDict[jeKey] = beDict[beKey]
-    elif jeLang == "en_us":
+    if args.pack == "bedrockify" and jeLang == "en_us":
         outputDict.update(sourceEnglish)
+
+    for beKey, jeKey in mapDict.items():
+        targetExists = jeKey in sourceEnglish if args.pack == "bedrockify" else jeKey in jeDict
+        if beKey in beDict and targetExists:
+            outputDict[jeKey] = beDict[beKey]
 
     for sourceKey, sourceValue in sourceEnglish.items():
         matchingKeys = sourceKeysByValue.get(sourceValue, [])

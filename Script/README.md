@@ -2,15 +2,15 @@
 
 * `runall.py` - Runs mapping and porting for both profiles, with an optional shared input download.
 * `downloader.py` - Downloads the latest stable Java Edition language files, all stable Bedrock `.lang` files, and Estonian from the latest language-pack release.
-* `mapper.py` - Creates BedrockFlavor CSV key mappings by comparing English Java and Bedrock strings.
+* `mapper.py` - Creates profile-specific CSV key mappings by comparing English Java and Bedrock strings.
 * `porter.py` - Uses the selected profile's source data to create Java Edition `.json` files.
 
 ## Files
 
 * `Input/` - Downloaded Java `.json` and Bedrock `.lang` language files.
 * `Extra-BedrockFlavor/` - BedrockFlavor mapping CSVs and configuration, including `source-en_us.json`, `overrides.json`, `prefixes.json`, and locale-specific `extra-*.json` files.
-* `Extra-Bedrockify/` - Bedrockify source strings and locale-specific `extra-*.json` files. Its CSV mappings are not used by the porter.
-* BedrockFlavor's `mappings.csv` is generated automatically; `extra-mappings.csv` contains additional human-created mappings.
+* `Extra-Bedrockify/` - Bedrockify source strings, profile-scoped CSV mappings, and locale-specific `extra-*.json` files.
+* Each profile's `mappings.csv` is generated automatically; `extra-mappings.csv` contains additional human-created mappings.
 * `Output-BedrockFlavor/` and `Output-Bedrockify/` - Generated Java Edition `.json` language files for each profile.
 * `requirements.txt` - Required Python libraries for running all scripts used in the project.
 
@@ -23,8 +23,8 @@
    * Add `--pack bedrockflavor` or `--pack bedrockify` to build only one profile. For example, `python runall.py false --pack bedrockify` builds Bedrockify from local inputs.
 4. Find generated language files in the matching `Output-*` directory.
 
-Both profiles use the shared Bedrock `.lang` and Java `.json` files in `Input/`. BedrockFlavor ports generic Bedrock mappings and supplements them with its source strings and locale extras. Bedrockify uses its source strings as the base, matches those strings against Bedrock English for translations, and then applies its locale extras; it does not port generic Bedrock mappings.
-- `source-en_us.json` supplies profile-specific English strings; for Bedrockify these are the base output entries for `en_us`.
+Both profiles use the shared Bedrock `.lang` and Java `.json` files in `Input/`. BedrockFlavor ports generic Bedrock mappings and supplements them with its source strings and locale extras. Bedrockify generates and consumes mappings only for keys in its source strings, then applies its locale extras; generic vanilla mappings are filtered out.
+- `source-en_us.json` supplies profile-specific English strings and allowed mapping targets; for Bedrockify these are the base output entries for `en_us`.
 - `extra-*.json` adds or replaces strings for a specific Java language after generic mapping.
 - `overrides.json` replaces output values.
 - `prefixes.json` adds prefixes to mapped output values.
