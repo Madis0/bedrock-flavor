@@ -3,3 +3,7 @@
 *.mrpack
 *.zip
 desktop.ini
+.DS_Store
+/Script/Input
+/Script/Output-BedrockFlavor
+/Script/Output-Bedrocking

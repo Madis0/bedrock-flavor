@@ -1,0 +1,9 @@
+{
+    "bedrockreloaded.general_text": "Ma ei tea, kus ja kuidas oleks kõige parem öelda: suur tänu kõigile neile, kes andsid oma panuse või aitasid mind mingil moel selle modipaki loomisel.\n\nSeega suur tänu - sulle, kes sa seda loed. Selle modipaki valmimine võttis aega kuid, isegi mitu aastat. Ilma nende inimesteta poleks see kõik võimalik olnud:",
+    "bedrockreloaded.connect": "Bedrocki serverite tugi",
+    "bedrockreloaded.connect.tooltip": "Bedrock Editioni serverite tugi on praegu beetaversioonis. Mõned funktsioonid ei pruugi korralikult töötada.\n\nSelle funktsiooni kasutamiseks pead Bedrocki kontoga sisse logima. Klõpsa sellele nupule, seejärel vali \"Account for Bedrock Edition\".",
+    "bedrockreloaded.realms": "Minecraft Realms ei ole ametlikult toetatud. Kuna Realms ei toeta kohandatud mode, pole mitmed modipaki funktsioonid saadaval või ei pruugi töötada ootuspäraselt.",
+    "bedrockreloaded.command_block": "Plokitüüp:",
+    "bedrockreloaded.command_condition": "Tingimus:",
+    "bedrockreloaded.general_license": "Litsents"
+}
