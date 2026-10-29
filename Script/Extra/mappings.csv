@@ -1670,16 +1670,16 @@ item.heart_of_the_sea.name,item.minecraft.heart_of_the_sea
 item.mace.name,item.minecraft.mace
 item.magma_cream.name,item.minecraft.magma_cream
 item.map.name,item.minecraft.filled_map
-item.map.exploration.mansion.name,filled_map.mansion
-item.map.exploration.monument.name,filled_map.monument
+item.map.exploration.mansion.name,item.minecraft.woodland_mansion_map
+item.map.exploration.monument.name,item.minecraft.ocean_monument_map
 item.map.exploration.village_snowy.name,filled_map.village_snowy
 item.map.exploration.village_taiga.name,filled_map.village_taiga
 item.map.exploration.village_plains.name,filled_map.village_plains
 item.map.exploration.village_savanna.name,filled_map.village_savanna
 item.map.exploration.village_desert.name,filled_map.village_desert
-item.map.exploration.jungle_temple.name,item.minecraft.jungle_explorer_map
-item.map.exploration.swamp_hut.name,filled_map.explorer_swamp
-item.map.exploration.trial_chambers.name,filled_map.trial_chambers
+item.map.exploration.jungle_temple.name,item.minecraft.jungle_pyramid_map
+item.map.exploration.swamp_hut.name,item.minecraft.swamp_hut_map
+item.map.exploration.trial_chambers.name,item.minecraft.buried_trial_chambers_map
 item.map.exploration.abandoned_camp_dappled_forest.name,filled_map.dappled_forest_camp_map
 item.map.exploration.abandoned_camp_bamboo_jungle.name,filled_map.bamboo_camp_map
 item.map.exploration.abandoned_camp_birch_forest.name,filled_map.birch_forest_camp_map
@@ -2220,6 +2220,7 @@ menu.video.mode,advMode.mode
 menu.video.gamma.action,config.jade.overlay_pos.adjust
 menu.language.tab.title,options.language.title
 menu.multiplayer.tab.title,menu.multiplayerOptions.network
+menu.party.privacyAndSafety.buttonLabel,sodium.options.open_external_page_button
 menu.touch.tab.title,midnightcontrols.menu.title.touch
 menu.multiplayer,menu.multiplayerOptions.network
 menu.moreOptions,mco.configure.world.buttons.moreoptions
@@ -2395,7 +2396,8 @@ options.particles,options.particles
 options.particles.all,options.particles.all
 options.particles.decreased,options.particles.decreased
 options.particles.minimal,options.particles.minimal
-options.partyPrivacy.open,sodium.options.open_external_page_button
+options.party.resetSettings,dataPack.validation.reset
+options.party.resetSettings.buttonLabel,bedrockskins.button.reset
 options.general,options.worldOptions.general.title
 options.account,options.skinCustomisation
 options.reducedDebugInfo,options.reducedDebugInfo
@@ -2992,6 +2994,7 @@ store.itemDetail.back,selectWorld.experimental.details
 store.realmsPlus.purchase.warningDialog.button.back,dataPack.validation.back
 store.csb.purchase.warningDialog.button.back,dataPack.validation.back
 store.csb.upsell.learnMore,mco.snapshotRealmsPopup.urlText
+store.csb.upsell.tryFree,mco.pdp.tryForFree
 store.csb.purchaseErrorDialog.back,better_screenshots.gallery.back
 store.csb.purchase.amazonDeviceWarning.button.back,dataPack.validation.back
 store.csb.banner.learnMore,mco.snapshotRealmsPopup.urlText
@@ -2999,6 +3002,9 @@ store.inventory.dropdown.current,options.fullscreen.current
 store.incompatible,pack.incompatible
 store.unlocked,narrator.button.difficulty_lock.unlocked
 store.popup.goBack,dataPack.validation.back
+store.gifting.limitReached.message,disconnect.genericReason
+store.gifting.limitReached.learnMore,mco.snapshotRealmsPopup.urlText
+store.gifting.limitReached.goBack,dataPack.validation.back
 store.popup.xblRequired.button2,text.cloth-config.cancel_discard
 store.popup.download.button1,mco.brokenworld.download
 store.popup.download.button2,mco.create.world.skip
@@ -3024,6 +3030,7 @@ store.search.filters.bundles,bedrockreloaded.itemGroup.name.bundles
 store.search.filter.graphics,sodium.options.pages.quality
 store.search.filter.offer_type.bundles,bedrockreloaded.itemGroup.name.bundles
 store.search.filter.worldTemplates,mco.configure.worlds.title
+store.search.filter.audio,options.sounds
 store.search.filter.dressingroombody,label.cosmetica.filter.body
 store.search.sort_menu.NewestFirst,label.cosmetica.sort.newest
 store.search.sort_menu.OldestFirst,label.cosmetica.sort.oldest
@@ -4258,6 +4265,7 @@ tile.cinnabar_brick_stairs.name,block.minecraft.cinnabar_brick_stairs
 tile.cinnabar_brick_wall.name,block.minecraft.cinnabar_brick_wall
 tile.chiseled_cinnabar.name,block.minecraft.chiseled_cinnabar
 tile.sulfur_spike.name,block.minecraft.sulfur_spike
+matchmaking.modal.goBack,dataPack.validation.back
 itemGroup.name.spear,bedrockreloaded.itemGroup.name.spear
 itemGroup.name.nautilus_armor,bedrockreloaded.itemGroup.name.nautilus_armor
 item.wooden_spear.name,item.minecraft.wooden_spear

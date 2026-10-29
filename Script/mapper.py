@@ -124,4 +124,4 @@ for beKey, jeKey in mappings:
     mapFile.write(beKey + "," + jeKey + "\n")
 
 mapFile.close()
-print("Identical strings have been written to " + outputPath + ".")
+print(f"Identical strings have been written to {outputPath}.")
