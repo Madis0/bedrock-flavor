@@ -4,7 +4,7 @@ from pathlib import Path
 DEFAULT_PACK = "bedrockflavor"
 PACK_DIRECTORY_NAMES = {
     "bedrockflavor": "BedrockFlavor",
-    "bedrockify": "Bedrockify",
+    "bedrocking": "Bedrocking",
 }
 
 

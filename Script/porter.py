@@ -99,7 +99,7 @@ parse_csv(extraPath / "extra-mappings.csv", mapDict)
 overrides = parse_json(extraPath / "overrides.json")
 prefixes = parse_json(extraPath / "prefixes.json")
 sourceEnglish = parse_json(extraPath / "source-en_us.json")
-if args.pack == "bedrockify":
+if args.pack == "bedrocking":
     mapDict = {
         bedrockKey: sourceKey
         for bedrockKey, sourceKey in mapDict.items()
@@ -120,11 +120,11 @@ for jeLang, beLang in languagePairs:
     beDict = parse_lang(beFile)
     outputDict = {}
 
-    if args.pack == "bedrockify" and jeLang == "en_us":
+    if args.pack == "bedrocking" and jeLang == "en_us":
         outputDict.update(sourceEnglish)
 
     for beKey, jeKey in mapDict.items():
-        targetExists = jeKey in sourceEnglish if args.pack == "bedrockify" else jeKey in jeDict
+        targetExists = jeKey in sourceEnglish if args.pack == "bedrocking" else jeKey in jeDict
         if beKey in beDict and targetExists:
             outputDict[jeKey] = beDict[beKey]
 
