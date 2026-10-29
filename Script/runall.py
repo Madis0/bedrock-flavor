@@ -1,7 +1,10 @@
 import subprocess
 import sys
+from pathlib import Path
 
-useDownloader = True
+scriptDir = Path(__file__).resolve().parent
+
+useDownloader = False
 extraSteps = True
 
 jeLangs = [
@@ -29,22 +32,22 @@ if len(sys.argv) > 1:
 
 if useDownloader:
     print("Executing the downloader script...")
-    subprocess.run([sys.executable, "Script/downloader.py"], check=True)
+    subprocess.run([sys.executable, str(scriptDir / "downloader.py")], check=True)
     print("Download script completed.\n")
 
 print("Now executing the mapper script...")
-subprocess.run([sys.executable, "Script/mapper.py"], check=True)
+subprocess.run([sys.executable, str(scriptDir / "mapper.py")], check=True)
 print("Mapper script completed.")
 
 if extraSteps:
     print("\nNow executing the spawn egg adding script...")
-    subprocess.call(["python", "Script/spawn-egg-adder.py"])
+    subprocess.call([sys.executable, str(scriptDir / "spawn-egg-adder.py")])
     print("Spawn egg adding script completed.\n\nNow executing the extra mapping cleanup...")
-    subprocess.call(["python", "Script/clean-extra-mappings.py"])
+    subprocess.call([sys.executable, str(scriptDir / "clean-extra-mappings.py")])
     print("\nExtra mapping cleanup completed.")
 
 print("Now executing the porting script for language pairs...")
-porterArgs = [sys.executable, "Script/porter.py"]
+porterArgs = [sys.executable, str(scriptDir / "porter.py")]
 if jeLangs or beLangs:
     porterArgs.extend([",".join(jeLangs), ",".join(beLangs)])
 subprocess.run(porterArgs, check=True)

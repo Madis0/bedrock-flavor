@@ -1,8 +1,10 @@
 import json
+from pathlib import Path
 
 # File names
-en_us_json_file = 'Script/Input/en_us.json'
-extra_mappings_file = 'Script/Extra/extra-mappings.csv'
+script_dir = Path(__file__).resolve().parent
+en_us_json_file = script_dir / 'Input' / 'en_us.json'
+extra_mappings_file = script_dir / 'Extra' / 'extra-mappings.csv'
 
 def read_json(file_name):
     with open(file_name, 'r', encoding='utf-8') as file:

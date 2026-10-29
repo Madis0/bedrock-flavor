@@ -1,16 +1,18 @@
 import difflib
 import json
+from pathlib import Path
 
 # Whether to include strings from the main Java Edition language file
 includeJe = True
 excludeKnownJe = True
 
 # File names and -paths
-jePath = "Script/Input/en_us.json"
-bePath = "Script/Input/en_US.lang"
-extraJePath = "Script/Extra/source-en_us.json"
-outputPath = "Script/Extra/mappings.csv"
-excludeJePath = "Script/Extra/exclude.txt"
+scriptDir = Path(__file__).resolve().parent
+jePath = scriptDir / "Input" / "en_us.json"
+bePath = scriptDir / "Input" / "en_US.lang"
+extraJePath = scriptDir / "Extra" / "source-en_us.json"
+outputPath = scriptDir / "Extra" / "mappings.csv"
+excludeJePath = scriptDir / "Extra" / "exclude.txt"
 
 # Arrays to store data in (temporarily)
 jeDict = {}
@@ -115,7 +117,7 @@ for beKey, beValue in enumerate(list(beDict.values())):
             mappings.append((list(beDict.keys())[beKey], valueMatchingKeys[0]))
 
 # Write to file mappings.csv
-print("Writing to " + outputPath + "...")
+print(f"Writing to {outputPath}...")
 mapFile = open(outputPath, 'w', encoding='utf-8')
 
 for beKey, jeKey in mappings:

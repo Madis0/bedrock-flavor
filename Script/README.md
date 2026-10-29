@@ -7,8 +7,9 @@
 
 ## Files
 
-* `Input/` - Downloaded Java `.json` and Bedrock `.lang` language files, mapping CSVs, and the `extra-en_us.json`, `overrides.json`, and `prefixes.json` configuration files.
-* `Input/mappings.csv` - Automatically generated key mappings. `Input/extra-mappings.csv` contains additional human-created mappings.
+* `Input/` - Downloaded Java `.json` and Bedrock `.lang` language files.
+* `Extra/` - Mapping CSVs and configuration files, including `source-en_us.json`, `overrides.json`, `prefixes.json`, and locale-specific `extra-*.json` files.
+* `Extra/mappings.csv` - Automatically generated key mappings. `Extra/extra-mappings.csv` contains additional human-created mappings.
 * `Output/` - Generated Java Edition `.json` language files.
 * `requirements.txt` - Required Python libraries for running all scripts used in the project.
 
@@ -20,7 +21,7 @@
    * Optionally define `true` or `false` as parameters, to control the downloader part. E.g. `python runall.py true` will download latest Mojang files and `python runall.py false` will only use locally existing files
 4. Find generated language files in `Output/`.
 
-- `source-en_us.json` adjusts English strings before mapping.
+- `Extra/source-en_us.json` adjusts English strings before mapping.
 - `extra-*.json` adds or replaces specific strings in a specific language after generic mapping.
 - `overrides.json` replaces output values.
 - `prefixes.json` adds prefixes to mapped output values. 

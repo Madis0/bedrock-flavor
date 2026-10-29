@@ -4,7 +4,7 @@ from pathlib import Path
 from zipfile import ZipFile
 import sys
 
-inputPath = Path("Script/Input")
+inputPath = Path(__file__).resolve().parent / "Input"
 inputPath.mkdir(exist_ok=True)
 
 # Choose what files to obtain with the script

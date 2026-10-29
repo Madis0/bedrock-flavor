@@ -5,9 +5,10 @@ import re
 import sys
 from pathlib import Path
 
-inputPath = Path("Script/Input")
-extraPath = Path("Script/Extra")
-outputPath = Path("Script/Output")
+scriptDir = Path(__file__).resolve().parent
+inputPath = scriptDir / "Input"
+extraPath = scriptDir / "Extra"
+outputPath = scriptDir / "Output"
 outputPath.mkdir(exist_ok=True)
 
 jeLangs = [ 

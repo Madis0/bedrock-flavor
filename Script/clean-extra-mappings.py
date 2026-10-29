@@ -1,8 +1,11 @@
 # Removes lines from extra-mappings.csv that already exist in mappings.csv
 
+from pathlib import Path
+
 # File names
-mappings_file = 'Script/Extra/mappings.csv'
-extra_mappings_file = 'Script/Extra/extra-mappings.csv'
+script_dir = Path(__file__).resolve().parent
+mappings_file = script_dir / 'Extra' / 'mappings.csv'
+extra_mappings_file = script_dir / 'Extra' / 'extra-mappings.csv'
 
 def read_mappings(file_name):
     with open(file_name, 'r', encoding='utf-8') as file:
@@ -17,19 +20,6 @@ def remove_duplicate_generic_mappings():
         for line in lines:
             if line not in mappings:
                 file.write(line)
-
-def read_left_keys(file_name):
-    with open(file_name, 'r', encoding='utf-8') as f:
-        lefts = set()
-        for line in f:
-            line = line.rstrip('\n')
-            if not line:
-                continue
-            parts = line.split(',', 1)  # mappings_file uses comma
-            left = parts[0].strip()
-            if left:
-                lefts.add(left)
-    return lefts
 
 def main():
     remove_duplicate_generic_mappings()
