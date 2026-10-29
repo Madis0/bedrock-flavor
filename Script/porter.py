@@ -1,14 +1,19 @@
 import csv
+import argparse
 import difflib
 import json
 import re
-import sys
 from pathlib import Path
+from pack_paths import add_pack_argument, get_pack_paths
 
 scriptDir = Path(__file__).resolve().parent
 inputPath = scriptDir / "Input"
-extraPath = scriptDir / "Extra"
-outputPath = scriptDir / "Output"
+parser = argparse.ArgumentParser()
+add_pack_argument(parser)
+parser.add_argument("je_langs", nargs="?")
+parser.add_argument("be_langs", nargs="?")
+args = parser.parse_args()
+extraPath, outputPath = get_pack_paths(scriptDir, args.pack)
 outputPath.mkdir(exist_ok=True)
 
 jeLangs = [ 
@@ -26,11 +31,12 @@ beLangs = [
     "sv_SE", "tr_TR", "uk_UA", "zh_CN", "zh_TW",
 ]
 
-# Expect exactly two separate arguments when provided:
-# python script.py "et_ee,fr_fr" "et_EE,fr_FR"
-if len(sys.argv) > 2:
-    jeLangs = [lang.strip() for lang in sys.argv[1].split(",") if lang.strip()]
-    beLangs = [lang.strip() for lang in sys.argv[2].split(",") if lang.strip()]
+# Optionally provide Java and Bedrock language lists as comma-separated arguments.
+if (args.je_langs is None) != (args.be_langs is None):
+    raise SystemExit("Provide both Java and Bedrock language lists, or neither.")
+if args.je_langs is not None:
+    jeLangs = [lang.strip() for lang in args.je_langs.split(",") if lang.strip()]
+    beLangs = [lang.strip() for lang in args.be_langs.split(",") if lang.strip()]
 
 if len(jeLangs) != len(beLangs):
     raise SystemExit("Java and Bedrock language lists must have the same number of entries.")
@@ -87,8 +93,9 @@ def parse_lang(path):
 
 
 print("Opening mapped strings...")
-parse_csv(extraPath / "mappings.csv", mapDict)
-parse_csv(extraPath / "extra-mappings.csv", mapDict)
+if args.pack == "bedrockflavor":
+    parse_csv(extraPath / "mappings.csv", mapDict)
+    parse_csv(extraPath / "extra-mappings.csv", mapDict)
 
 overrides = parse_json(extraPath / "overrides.json")
 prefixes = parse_json(extraPath / "prefixes.json")
@@ -108,9 +115,12 @@ for jeLang, beLang in languagePairs:
     beDict = parse_lang(beFile)
     outputDict = {}
 
-    for beKey, jeKey in mapDict.items():
-        if beKey in beDict and jeKey in jeDict:
-            outputDict[jeKey] = beDict[beKey]
+    if args.pack == "bedrockflavor":
+        for beKey, jeKey in mapDict.items():
+            if beKey in beDict and jeKey in jeDict:
+                outputDict[jeKey] = beDict[beKey]
+    elif jeLang == "en_us":
+        outputDict.update(sourceEnglish)
 
     for sourceKey, sourceValue in sourceEnglish.items():
         matchingKeys = sourceKeysByValue.get(sourceValue, [])

@@ -1,10 +1,16 @@
+import argparse
 import json
 from pathlib import Path
+from pack_paths import add_pack_argument, get_pack_paths
 
 # File names
 script_dir = Path(__file__).resolve().parent
 en_us_json_file = script_dir / 'Input' / 'en_us.json'
-extra_mappings_file = script_dir / 'Extra' / 'extra-mappings.csv'
+parser = argparse.ArgumentParser()
+add_pack_argument(parser)
+args = parser.parse_args()
+extra_path, _ = get_pack_paths(script_dir, args.pack)
+extra_mappings_file = extra_path / 'extra-mappings.csv'
 
 def read_json(file_name):
     with open(file_name, 'r', encoding='utf-8') as file:

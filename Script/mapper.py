@@ -1,6 +1,8 @@
+import argparse
 import difflib
 import json
 from pathlib import Path
+from pack_paths import add_pack_argument, get_pack_paths
 
 # Whether to include strings from the main Java Edition language file
 includeJe = True
@@ -10,9 +12,13 @@ excludeKnownJe = True
 scriptDir = Path(__file__).resolve().parent
 jePath = scriptDir / "Input" / "en_us.json"
 bePath = scriptDir / "Input" / "en_US.lang"
-extraJePath = scriptDir / "Extra" / "source-en_us.json"
-outputPath = scriptDir / "Extra" / "mappings.csv"
-excludeJePath = scriptDir / "Extra" / "exclude.txt"
+parser = argparse.ArgumentParser()
+add_pack_argument(parser)
+args = parser.parse_args()
+extraPath, _ = get_pack_paths(scriptDir, args.pack)
+extraJePath = extraPath / "source-en_us.json"
+outputPath = extraPath / "mappings.csv"
+excludeJePath = extraPath / "exclude.txt"
 
 # Arrays to store data in (temporarily)
 jeDict = {}

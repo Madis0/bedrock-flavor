@@ -103,6 +103,7 @@ chestScreen.header.small,container.chest
 craftingScreen.tab.items,stat.itemsButton
 craftingScreen.tab.survival,key.category.minecraft.inventory
 craftingScreen.tab.armor,attribute.name.generic.armor
+craftingScreen.tab.allItems,itemGroup.search
 craftingScreen.tts.tab.inventory,container.inventory
 accessibility.tts.toggle.inventory.layout,key.categories.inventory
 accessibility.tts.button.howtoplay,ui.minepedia.how_to_play
