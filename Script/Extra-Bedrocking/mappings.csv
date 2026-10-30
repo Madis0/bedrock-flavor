@@ -26,8 +26,6 @@ howtoplay.beds,group_name.inventory_item_groups.bedrockreloaded.bed
 howtoplay.bedsNew,group_name.inventory_item_groups.bedrockreloaded.bed
 howtoplay.chests,group_name.inventory_item_groups.bedrockreloaded.chest
 howtoplay.conduits.header.1,bedrockreloaded.tab.construction
-howtoplay.permissionBlocks,group_name.inventory_item_groups.bedrockreloaded.permission
-howtoplay.chalkboard,group_name.inventory_item_groups.bedrockreloaded.chalkboard
 howtoplay.dyes,group_name.inventory_item_groups.bedrockreloaded.dye
 howtoplay.fireworks,group_name.inventory_item_groups.bedrockreloaded.firework
 howtoplay.inventory,bedrockreloaded.tab.survival
@@ -43,7 +41,6 @@ itemGroup.name.stairs,group_name.inventory_item_groups.bedrockreloaded.stairs
 itemGroup.name.door,group_name.inventory_item_groups.bedrockreloaded.door
 itemGroup.name.glass,group_name.inventory_item_groups.bedrockreloaded.glass
 itemGroup.name.glassPane,group_name.inventory_item_groups.bedrockreloaded.glassPane
-itemGroup.name.permission,group_name.inventory_item_groups.bedrockreloaded.permission
 itemGroup.name.slab,group_name.inventory_item_groups.bedrockreloaded.slab
 itemGroup.name.stoneBrick,group_name.inventory_item_groups.bedrockreloaded.stoneBrick
 itemGroup.name.sandstone,group_name.inventory_item_groups.bedrockreloaded.sandstone
@@ -85,7 +82,6 @@ itemGroup.name.splashPotion,group_name.inventory_item_groups.bedrockreloaded.spl
 itemGroup.name.lingeringPotion,group_name.inventory_item_groups.bedrockreloaded.lingeringPotion
 itemGroup.name.ominousBottle,group_name.inventory_item_groups.bedrockreloaded.ominousBottle
 itemGroup.name.bed,group_name.inventory_item_groups.bedrockreloaded.bed
-itemGroup.name.chalkboard,group_name.inventory_item_groups.bedrockreloaded.chalkboard
 itemGroup.name.anvil,group_name.inventory_item_groups.bedrockreloaded.anvil
 itemGroup.name.chest,group_name.inventory_item_groups.bedrockreloaded.chest
 itemGroup.name.shulkerBox,group_name.inventory_item_groups.bedrockreloaded.shulkerBox
@@ -110,8 +106,6 @@ itemGroup.name.banner_pattern,group_name.inventory_item_groups.bedrockreloaded.b
 itemGroup.name.netherWartBlock,group_name.inventory_item_groups.bedrockreloaded.netherWartBlock
 itemGroup.name.candles,group_name.inventory_item_groups.bedrockreloaded.candles
 itemGroup.name.goatHorn,group_name.inventory_item_groups.bedrockreloaded.goatHorn
-itemGroup.name.compounds,group_name.inventory_item_groups.bedrockreloaded.compounds
-itemGroup.name.products,group_name.inventory_item_groups.bedrockreloaded.products
 itemGroup.name.bundles,group_name.inventory_item_groups.bedrockreloaded.bundles
 key.categories.inventory,bedrockreloaded.tab.survival
 key.categories.multiplayer,bedrockreloaded.multiplayer
@@ -129,6 +123,10 @@ options.social,bedrockreloaded.social
 hudScreen.tooltip.inventory,bedrockreloaded.tab.survival
 sidebar.marketplace,bedrockreloaded.menu_shop
 storageManager.contentType.world,bedrockreloaded.world
+tile.sculk.name,group_name.inventory_item_groups.bedrockreloaded.sculk
+itemGroup.name.sculk,group_name.inventory_item_groups.bedrockreloaded.sculk
+itemGroup.name.hanging_sign,group_name.inventory_item_groups.bedrockreloaded.hanging_sign
+itemGroup.name.potterySherds,group_name.inventory_item_groups.bedrockreloaded.potterySherds
 storageManager.title.item.plural,bedrockreloaded.tab.items
 selectWorld.world,bedrockreloaded.world
 stat.itemsButton,bedrockreloaded.tab.items
@@ -144,6 +142,7 @@ tile.wool.name,group_name.inventory_item_groups.bedrockreloaded.wool
 tile.wheat.name,group_name.inventory_item_groups.bedrockreloaded.crop
 tile.glass.name,group_name.inventory_item_groups.bedrockreloaded.glass
 tile.leaves.name,group_name.inventory_item_groups.bedrockreloaded.leaves
+itemGroup.name.lightning_rod,group_name.inventory_item_groups.bedrockreloaded.lightning_rod
 tile.monster_egg.name,group_name.inventory_item_groups.bedrockreloaded.monsterStoneEgg
 tile.monster_egg.stone.name,group_name.inventory_item_groups.bedrockreloaded.monsterStoneEgg
 tile.sandstone.default.name,group_name.inventory_item_groups.bedrockreloaded.sandstone
@@ -152,3 +151,12 @@ tile.stone.stone.name,group_name.inventory_item_groups.bedrockreloaded.stone
 translation.test.world,bedrockreloaded.world
 trial.tabbed_upsell.multiplayer.title,bedrockreloaded.multiplayer
 trial.tabbed_upsell.seeds.title,group_name.inventory_item_groups.bedrockreloaded.seed
+itemGroup.name.harnesses,group_name.inventory_item_groups.bedrockreloaded.harnesses
+itemGroup.name.shelf,group_name.inventory_item_groups.bedrockreloaded.shelf
+itemGroup.name.copper_golem_statue,group_name.inventory_item_groups.bedrockreloaded.copper_golem_statue
+itemGroup.name.bars,group_name.inventory_item_groups.bedrockreloaded.bars
+itemGroup.name.chains,group_name.inventory_item_groups.bedrockreloaded.chains
+itemGroup.name.lanterns,group_name.inventory_item_groups.bedrockreloaded.lanterns
+itemGroup.name.spear,group_name.inventory_item_groups.bedrockreloaded.spear
+itemGroup.name.nautilus_armor,group_name.inventory_item_groups.bedrockreloaded.nautilus_armor
+itemGroup.name.cushion,group_name.inventory_item_groups.bedrockreloaded.cushion

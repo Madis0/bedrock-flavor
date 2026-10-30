@@ -4,6 +4,7 @@
 *.zip
 desktop.ini
 .DS_Store
+/Script/__pycache__
 /Script/Input
 /Script/Output-BedrockFlavor
 /Script/Output-Bedrocking

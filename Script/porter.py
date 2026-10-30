@@ -113,6 +113,15 @@ for beKey, value in sourceBedrockEnglish.items():
     sourceKeysByValue.setdefault(value, []).append(beKey)
     sourceKeysByCasefoldedValue.setdefault(value.casefold(), []).append(beKey)
 
+# Output key order: Bedrocking follows source-en_us.json; BedrockFlavor follows the
+# Java Edition en_us.json first, then the extra keys from source-en_us.json.
+referenceKeys = list(sourceEnglish)
+if args.pack != "bedrocking" and (inputPath / "en_us.json").exists():
+    referenceKeys = list(parse_json(inputPath / "en_us.json")) + referenceKeys
+referenceOrder = {}
+for referenceKey in referenceKeys:
+    referenceOrder.setdefault(referenceKey, len(referenceOrder))
+
 for jeLang, beLang in languagePairs:
     jeFile = inputPath / (jeLang + ".json")
     beFile = inputPath / (beLang + ".lang")
@@ -163,6 +172,10 @@ for jeLang, beLang in languagePairs:
         for key, value in outputDict.items()
         if value != jeDict.get(key)
     }
+
+    outputDict = dict(
+        sorted(outputDict.items(), key=lambda item: referenceOrder.get(item[0], len(referenceOrder)))
+    )
 
     outputFile = outputPath / (jeLang + ".json")
     with open(outputFile, "w", encoding="utf-8") as file:
